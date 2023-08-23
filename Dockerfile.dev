@@ -37,8 +37,7 @@ RUN \
 WORKDIR /usr/src
 
 # Setup hass-release
-RUN git config --unset-all http.sslBackend \
-    && git clone --depth 1 https://github.com/home-assistant/hass-release \
+RUN git clone --depth 1 https://github.com/home-assistant/hass-release \
     && pip3 install -e hass-release/
 
 WORKDIR /workspaces
